@@ -1,0 +1,20 @@
+{
+  "name": "html-mmo",
+  "version": "1.0.0",
+  "description": "Tiny browser MMO prototype with real-time movement and chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mmo",
+    "html",
+    "websocket"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML MMO Prototype</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="status">Connecting...</div>
+      <div id="playerCount">Players: 0</div>
+      <div id="inventoryCount">Rocks: 0</div>
+      <div id="mineHelp">Mine the gold rock at bottom-right (E)</div>
+    </div>
+//thing and stuff
+    <section id="miniMapPanel" aria-label="Minimap">
+      <canvas id="miniMap"></canvas>
+    </section>
+
+    <canvas id="game"></canvas>
+
+    <section id="chatPanel">
+      <div id="chatLog" aria-live="polite"></div>
+      <form id="chatForm" autocomplete="off">
+        <label class="sr-only" for="chatInput">Chat</label>
+        <input id="chatInput" maxlength="160" placeholder="Press Enter to chat" />
+      </form>
+    </section>
+
+    <dialog id="joinDialog">
+      <form id="joinForm" method="dialog">
+        <h1>Join World</h1>
+        <label for="nameInput">Name</label>
+        <input id="nameInput" maxlength="18" required />
+        <button type="submit">Enter</button>
+      </form>
+    </dialog>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

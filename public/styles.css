@@ -1,0 +1,171 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #08121f;
+  color: #e6eef8;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #11253c 0%, #07101b 100%);
+}
+
+#hud {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  background: rgb(4 10 17 / 72%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-width: 160px;
+}
+
+#mineHelp {
+  font-size: 12px;
+  color: #b6c8db;
+}
+
+#miniMapPanel {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+  width: 190px;
+  height: 190px;
+  background: rgb(4 10 17 / 72%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#miniMap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: rgb(8 16 27 / 96%);
+}
+
+#chatPanel {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 20;
+  width: min(360px, calc(100vw - 24px));
+  height: min(250px, calc(100vh - 24px));
+  background: rgb(4 10 17 / 72%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+}
+
+#chatLog {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.line {
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.line .name {
+  font-weight: 600;
+}
+
+#chatForm {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding: 8px;
+}
+
+#chatInput {
+  width: 100%;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 6px;
+  background: rgb(9 20 33);
+  color: #f4f8ff;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+#chatInput:focus {
+  outline: 2px solid #4b89ff;
+  outline-offset: 0;
+}
+
+#joinDialog {
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 8px;
+  padding: 0;
+  background: #0a1624;
+  color: #e6eef8;
+  width: min(360px, calc(100vw - 30px));
+}
+
+#joinDialog::backdrop {
+  background: rgb(1 4 8 / 66%);
+}
+
+#joinForm {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+#joinForm h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+#nameInput {
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 6px;
+  background: rgb(9 20 33);
+  color: #f4f8ff;
+  padding: 9px 10px;
+  font-size: 14px;
+}
+
+#joinForm button {
+  border: 0;
+  border-radius: 6px;
+  background: #3d7aff;
+  color: #fff;
+  font-size: 14px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
